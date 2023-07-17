@@ -1,13 +1,16 @@
-name: Shell Commands
+name: First Workflow
 on: workflow_dispatch
-
 jobs:
-    run-shell-command:
-        runs-on: ubuntu:latest
-        steps:
-            - name: echo a String
-              run: echo "Hello World"
-            - name: multiline script
-              run: |
-                node -v
-                npm -v
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+      - name: echo a String
+        run: echo "Hello World"
+      - name: multiline script
+        run: |
+           node -v
+           npm -v
